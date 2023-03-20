@@ -1,0 +1,3 @@
+alter table threads add FULLTEXT(`thread_title`, `thread_desc`);
+
+SELECT * FROM threadlist WHERE MATCH(thread_title, thread_desc) AGAINST ('your query')
